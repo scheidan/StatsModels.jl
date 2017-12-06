@@ -42,7 +42,7 @@ ModelFrame(df::AbstractDataFrame, terms::Terms, missing::BitArray, contrasts::Di
 
 ```julia
 julia> df = DataFrame(x = 1:4, y = 5:9)
-julia> mf = ModelFrame(y ~ 1 + x, df)
+julia> mf = ModelFrame(@formula(y ~ 1 + x), df)
 ```
 
 """
